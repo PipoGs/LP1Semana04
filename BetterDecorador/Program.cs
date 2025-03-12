@@ -15,7 +15,14 @@ namespace BetterDecorador
             char character = char.Parse(args[1]);
             int number = int.Parse(args[2]);
 
-            Console.WriteLine(Decor(args[0], character, number));
+            if (args.Length == 0)
+            {
+                Console.WriteLine(Decor());
+            }
+            else
+            {
+                Console.WriteLine(Decor(args[0], character, number));
+            }
         }
 
         /// <summary>
@@ -34,6 +41,13 @@ namespace BetterDecorador
                 str += dec;
             }
             return $"{str} {s} {str}";
+
+
+        }
+
+        private static string Decor()
+        {
+            return Decor("User did not specify args!", '=', 3);
         }
     }
 }
