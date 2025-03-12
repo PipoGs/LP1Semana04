@@ -7,7 +7,7 @@ namespace Special
         private static void Main(string[] args)
         {
             Console.WriteLine("Insert n-th number of the special sequence: ");
-            
+
             int n = int.Parse(Console.ReadLine());
 
             Console.WriteLine(GetSpecial(n));
@@ -15,16 +15,15 @@ namespace Special
 
         private static int GetSpecial(int n)
         {
-            int firstnum = 0;
-            int secondnum = 1;
-            int result = 0;
 
-            for (int i = 0; i < n; i++)
-            {
-                result = 2 * firstnum + secondnum; 
-            }
-            
-            return  result;
+            if (n == 0)
+                return 0;
+            if (n == 1)
+                return 1;
+
+            return GetSpecial(n - 1) + 2 * GetSpecial(n - 2);
         }
+
     }
 }
+
