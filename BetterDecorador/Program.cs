@@ -8,6 +8,8 @@ namespace BetterDecorador
         /// <summary>
         /// Main method that receives the argument and calls Decor method
         /// to decorate the string with the character and number of times
+        /// If no arguments are input, it calls the Decor method that warns the 
+        /// user of it
         /// </summary>
         /// <param name="args"></param>
         private static void Main(string[] args)
@@ -44,7 +46,10 @@ namespace BetterDecorador
 
 
         }
-
+        /// <summary>
+        /// This method returns a string decorated with "=", 3 times.
+        /// </summary>
+        /// <returns></returns>
         private static string Decor()
         {
             return Decor("User did not specify args!", '=', 3);
