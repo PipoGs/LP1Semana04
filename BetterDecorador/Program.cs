@@ -12,8 +12,6 @@ namespace BetterDecorador
         /// <param name="args"></param>
         private static void Main(string[] args)
         {
-            char character = char.Parse(args[1]);
-            int number = int.Parse(args[2]);
 
             if (args.Length == 0)
             {
@@ -21,6 +19,8 @@ namespace BetterDecorador
             }
             else
             {
+                char character = char.Parse(args[1]);
+                int number = int.Parse(args[2]);
                 Console.WriteLine(Decor(args[0], character, number));
             }
         }
